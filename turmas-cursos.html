@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#28496f">
+  <title>Turmas e Cursos — Desempenha</title>
+  <link rel="stylesheet" href="turmas-cursos.css">
+</head>
+<body class="dashboard-page">
+  <main class="dashboard-shell">
+    <aside class="dashboard-sidebar">
+      <a class="sidebar-brand" href="painelprincipal.html" aria-label="Desempenha — Início">
+        <img src="logo.png" alt="Desempenha — Avaliação de Alunos">
+      </a>
+      <nav class="dashboard-nav" aria-label="Navegação principal">
+        <a class="nav-item" href="painelprincipal.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8M5.5 9.5V21h13V9.5M9 21v-7h6v7"/></svg><span>Início</span></a>
+        <a class="nav-item" href="painelprincipal.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21c.4-4.6 3.2-7 8-7s7.6 2.4 8 7z"/></svg><span>Alunos</span></a>
+        <a class="nav-item active" href="turmas-cursos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><circle cx="3.5" cy="10" r="2"/><path d="M2 19c.2-3.3 2.4-5.2 6-5.2s5.8 1.9 6 5.2zM14 14.5c4.7-.8 7.5 1.1 8 4.5h-6"/></svg><span>Turmas</span></a>
+        <a class="nav-item" href="turmas-cursos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5zM4 5.5v16M8 7h8M8 10h8M8 13h6"/></svg><span>Cursos</span></a>
+        <a class="nav-item" href="criterios.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4.5" width="14" height="18" rx="1.5"/><path d="M9 4.5V3h6v1.5M8 9h8M8 12.5h8M8 16h3l1.5 1.5L16 14"/></svg><span>Avaliações</span></a>
+        <a class="nav-item" href="resultados.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 8h8M8 12h2m2 0h4m-8 4h8M8 2v4m8-4v4M2 8h4m12 0h4M2 16h4m12 0h4"/></svg><span>Resultados</span></a>
+        <a class="nav-item" href="recompensas.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-2.5-3.2-7-1.1-5.3 2.2C8 8.6 12 9 12 9s4-.4 5.3-2.8C19 2.9 14.5.8 12 4zM12 9v12m-7 0h14M7 11l5 4 5-4M5 18l7-3 7 3"/></svg><span>Recompensas</span></a>
+        <a class="nav-item" href="resultados.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="15" height="13" rx="1"/><path d="M6 8h9M6 11h5M6 14h7m-8 6h13l-2-3M18 8h3v12h-5M8 2v4m5-4v4"/></svg><span>Relatórios</span></a>
+        <a class="nav-item" href="criterios.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="2"/><circle cx="6" cy="13" r="2"/><circle cx="18" cy="13" r="2"/><path d="M12 10v3m-4.5 1.5L10 17m6.5-2.5L14 17M8 21l4-4 4 4M12 3v3M4 8l3 2m13-2-3 2"/></svg><span>Configurações</span></a>
+      </nav>
+    </aside>
+
+    <section class="dashboard-main">
+      <div class="dashboard-content">
+        <div class="content-header">
+          <nav class="tabs-nav" aria-label="Abas de Turmas e Cursos">
+            <a class="tab-link active" href="turmas-cursos.html">Turmas</a>
+            <a class="tab-link" href="turmas-cursos.html">Cursos</a>
+          </nav>
+          <button class="primary-action-button" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+            Nova turma
+          </button>
+        </div>
+
+        <section class="turmas-section">
+          <div class="table-scroll">
+            <table class="turmas-table">
+              <thead>
+                <tr>
+                  <th>Nome da turma</th>
+                  <th>Curso</th>
+                  <th>Ano letivo</th>
+                  <th>Vagas</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Turma A</td>
+                  <td>Desenvolvimento de Sistemas</td>
+                  <td>2026</td>
+                  <td>25</td>
+                  <td><span class="status-pill ativa">Ativa</span></td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="icon-btn edit" title="Editar" type="button"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+                      <button class="icon-btn delete" title="Excluir" type="button"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Turma B</td>
+                  <td>Redes de Computadores</td>
+                  <td>2026</td>
+                  <td>25</td>
+                  <td><span class="status-pill ativa">Ativa</span></td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="icon-btn edit" title="Editar" type="button"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+                      <button class="icon-btn delete" title="Excluir" type="button"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

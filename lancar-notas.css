@@ -1,0 +1,408 @@
+/* Estilos da tela de Lançar Notas (padronizado com o sistema Desempenha) */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color: #1d3b64;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f2f7fb;
+}
+
+.dashboard-page {
+  color: #3f5f88;
+  background: #f2f7fb;
+}
+
+.dashboard-shell {
+  display: flex;
+  min-height: 100vh;
+  background: #f2f7fb;
+}
+
+/* Menu lateral */
+.dashboard-sidebar {
+  flex: 0 0 24.2%;
+  min-width: 230px;
+  max-width: 300px;
+  padding: 25px 16px;
+  color: #fff;
+  background: linear-gradient(155deg, #28496f 0%, #547193 48%, #d7e7f6 100%);
+}
+
+.sidebar-brand {
+  display: block;
+  width: 74%;
+  margin: 0 auto 22px;
+}
+
+.sidebar-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dashboard-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  min-height: 37px;
+  gap: 16px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: rgb(255 255 255 / 18%);
+}
+
+.nav-item svg {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
+/* Barra superior e perfil */
+.dashboard-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 57px;
+  padding: 0 20px;
+  background: #fff;
+  border-bottom: 1px solid #e6eef6;
+}
+
+.menu-toggle {
+  display: grid;
+  gap: 4px;
+  padding: 4px 2px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background: #375b85;
+}
+
+.profile-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.notification-button,
+.profile-button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  color: #263a53;
+  background: none;
+  cursor: pointer;
+}
+
+.notification-button svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+}
+
+.profile-button {
+  gap: 6px;
+  text-align: left;
+}
+
+.avatar {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #2e4e74;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.profile-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  line-height: 1.15;
+}
+
+.profile-name strong {
+  font-weight: 700;
+}
+
+.profile-name small {
+  font-size: 9px;
+  color: #6c88a8;
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+
+/* Conteúdo Principal */
+.dashboard-content {
+  padding: 32px 2.4% 40px;
+}
+
+/* Cabeçalho da Avaliação do Aluno */
+.evaluation-header {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
+}
+
+.evaluation-header h1 {
+  margin: 0 0 10px;
+  color: #28496f;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.evaluation-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: #7a92b0;
+}
+
+.badge-pill {
+  background: #f0f4f8;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #3f5f88;
+  font-weight: 600;
+}
+
+.date-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+/* Tabela de Lançamento */
+.grades-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  color: #3f5f88;
+  white-space: nowrap;
+}
+
+.grades-table th {
+  text-align: left;
+  height: 44px;
+  padding: 0 12px;
+  color: #526f91;
+  font-weight: 600;
+  border-bottom: 1px solid #e2eaf2;
+}
+
+.grades-table td {
+  padding: 12px;
+  border-bottom: 1px solid #edf2f7;
+  vertical-align: middle;
+  font-weight: 500;
+  color: #2e4a6f;
+}
+
+.grade-input {
+  width: 70px;
+  height: 38px;
+  border: 1px solid #b9c6d4;
+  border-radius: 6px;
+  text-align: center;
+  font: inherit;
+  font-weight: 600;
+  color: #1d3b64;
+  background: #fff;
+}
+
+.obs-input {
+  width: 100%;
+  min-width: 220px;
+  height: 38px;
+  border: 1px solid #b9c6d4;
+  border-radius: 6px;
+  padding: 0 10px;
+  font: inherit;
+  color: #3f5f88;
+  background: #fff;
+}
+
+.grade-input:focus,
+.obs-input:focus,
+.general-obs-textarea:focus {
+  border-color: #1762ff;
+  outline: 2px solid rgb(23 98 255 / 15%);
+}
+
+/* Observações Gerais e Botões */
+.general-obs-section {
+  margin-top: 24px;
+}
+
+.general-obs-section label {
+  display: block;
+  margin-bottom: 8px;
+  color: #3f5f88;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.general-obs-textarea {
+  width: 100%;
+  height: 90px;
+  border: 1px solid #b9c6d4;
+  border-radius: 6px;
+  padding: 12px;
+  font: inherit;
+  color: #3f5f88;
+  resize: vertical;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cancel-btn,
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  height: 40px;
+  font: inherit;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #fff;
+  border: 1px solid #b9c6d4;
+  color: #3f5f88;
+  padding: 0 20px;
+  font-weight: 600;
+}
+
+.cancel-btn:hover {
+  background: #f8fafc;
+}
+
+.primary-btn {
+  background: #1762ff;
+  color: #fff;
+  border: 0;
+  padding: 0 24px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgb(23 98 255 / 25%);
+}
+
+.primary-btn:hover {
+  background: #0f52e0;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .dashboard-sidebar {
+    flex-basis: 62px;
+    min-width: 62px;
+    padding: 14px 8px;
+  }
+
+  .sidebar-brand {
+    width: 42px;
+    overflow: hidden;
+  }
+
+  .sidebar-brand img {
+    width: 126px;
+    max-width: none;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: 4px;
+  }
+
+  .nav-item span {
+    display: none;
+  }
+
+  .form-footer {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .primary-btn {
+    width: 100%;
+  }
+}

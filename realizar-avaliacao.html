@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Realizar avaliação — Desempenha</title>
+  <link rel="stylesheet" href="realizar-avaliacao.css">
+</head>
+<body>
+  <main class="dashboard-shell">
+    <aside class="dashboard-sidebar">
+      <a class="sidebar-brand" href="#"><img src="logo.png" alt="Desempenha"></a>
+      <nav class="dashboard-nav">
+        <a class="nav-item" href="#"><span>Início</span></a>
+        <a class="nav-item" href="#"><span>Alunos</span></a>
+        <a class="nav-item" href="#"><span>Turmas</span></a>
+        <a class="nav-item" href="#"><span>Cursos</span></a>
+        <a class="nav-item active" href="#"><span>Avaliações</span></a>
+        <a class="nav-item" href="#"><span>Resultados</span></a>
+        <a class="nav-item" href="#"><span>Recompensas</span></a>
+        <a class="nav-item" href="#"><span>Relatórios</span></a>
+        <a class="nav-item" href="#"><span>Configurações</span></a>
+      </nav>
+    </aside>
+
+    <section class="dashboard-main">
+      <div class="dashboard-content">
+        <!-- Indicador de Passos -->
+        <div class="steps-container">
+          <div class="step-item active">
+            <span class="step-number">1</span>
+            <span>Aluno</span>
+          </div>
+          <div class="step-item">
+            <span class="step-number">2</span>
+            <span>Critérios</span>
+          </div>
+          <div class="step-item">
+            <span class="step-number">3</span>
+            <span>Observações</span>
+          </div>
+          <div class="step-item">
+            <span class="step-number">4</span>
+            <span>Revisar</span>
+          </div>
+        </div>
+
+        <!-- Formulário da Etapa 1 -->
+        <section class="form-card">
+          <h2>1. Selecione o aluno e a turma</h2>
+          
+          <div class="input-group">
+            <label>Aluno *</label>
+            <div class="select-wrap">
+              <select>
+                <option>Ana Costa (código: 001)</option>
+                <option>Carlos Silva (código: 002)</option>
+              </select>
+              <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Turma *</label>
+            <div class="select-wrap">
+              <select>
+                <option>Turma A – Desenvolvimento de Sistemas</option>
+                <option>Turma B – Redes de Computadores</option>
+              </select>
+              <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="primary-btn" type="button">Próximo</button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

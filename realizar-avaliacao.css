@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+:root { color: #1d3b64; font-family: "Segoe UI", Arial, sans-serif; }
+body { min-width: 320px; min-height: 100vh; margin: 0; background: #f2f7fb; }
+.dashboard-shell { display: flex; min-height: 100vh; background: #f2f7fb; }
+.dashboard-sidebar { flex: 0 0 24.2%; min-width: 230px; max-width: 300px; padding: 25px 16px; color: #fff; background: linear-gradient(155deg, #28496f 0%, #547193 48%, #d7e7f6 100%); }
+.sidebar-brand { display: block; width: 74%; margin: 0 auto 22px; }
+.sidebar-brand img { width: 100%; height: auto; display: block; }
+.dashboard-nav { display: flex; flex-direction: column; gap: 7px; }
+.nav-item { display: flex; align-items: center; min-height: 37px; gap: 16px; padding: 4px 10px; border-radius: 4px; color: #fff; font-size: 18px; font-weight: 500; text-decoration: none; }
+.nav-item:hover, .nav-item.active { background: rgb(255 255 255 / 18%); }
+.nav-item svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.4; }
+.dashboard-main { flex: 1; min-width: 0; }
+.dashboard-content { padding: 32px 2.4% 40px; }
+
+/* Passos do Wizard */
+.steps-container { display: flex; justify-content: space-between; max-width: 650px; margin: 0 auto 36px; position: relative; }
+.steps-container::before { content: ""; position: absolute; top: 18px; left: 40px; right: 40px; height: 2px; background: #d3e2ef; z-index: 1; }
+.step-item { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px; color: #7a92b0; font-size: 13px; font-weight: 600; }
+.step-number { width: 36px; height: 36px; border-radius: 50%; background: #e2edf7; color: #7a92b0; display: grid; place-items: center; font-size: 14px; font-weight: 700; }
+.step-item.active .step-number { background: #1762ff; color: #fff; box-shadow: 0 0 0 4px rgb(23 98 255 / 15%); }
+.step-item.active { color: #1762ff; }
+
+/* Card do Formulário */
+.form-card { background: #fff; border-radius: 8px; padding: 28px; box-shadow: 0 1px 3px rgb(0 0 0 / 6%); position: relative; }
+.form-card h2 { margin: 0 0 24px; color: #28496f; font-size: 16px; font-weight: 650; }
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; margin-bottom: 8px; color: #3f5f88; font-size: 13px; font-weight: 600; }
+.select-wrap { position: relative; display: flex; align-items: center; border: 1px solid #b9c6d4; border-radius: 6px; background: #fff; height: 46px; padding: 0 14px; }
+.select-wrap:focus-within { border-color: #1762ff; outline: 2px solid rgb(23 98 255 / 12%); }
+.select-wrap select { width: 100%; border: 0; outline: 0; background: transparent; font: inherit; font-size: 14px; color: #28496f; appearance: none; cursor: pointer; }
+.select-wrap svg { width: 16px; height: 16px; fill: none; stroke: #7a92b0; stroke-width: 2; position: absolute; right: 14px; pointer-events: none; }
+
+.form-actions { display: flex; justify-content: flex-end; margin-top: 32px; }
+.primary-btn { background: #1762ff; color: #fff; border: 0; border-radius: 6px; height: 44px; padding: 0 28px; font: inherit; font-size: 14px; font-weight: 650; cursor: pointer; box-shadow: 0 2px 4px rgb(23 98 255 / 25%); }
+.primary-btn:hover { background: #0f52e0; }
