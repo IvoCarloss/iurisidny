@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#28496f">
-  <title>Critérios de Avaliação — Desempenha</title>
+  <title>Avaliações e Critérios — Desempenha</title>
   <link rel="stylesheet" href="criterios.css">
 </head>
 <body class="dashboard-page">
   <main class="dashboard-shell">
+    <!-- Menu Lateral -->
     <aside class="dashboard-sidebar">
       <a class="sidebar-brand" href="painelprincipal.html" aria-label="Desempenha — Início">
         <img src="logo.png" alt="Desempenha — Avaliação de Alunos">
@@ -26,7 +27,9 @@
       </nav>
     </aside>
 
+    <!-- Conteúdo Principal -->
     <section class="dashboard-main">
+      <!-- Barra Superior Fixa -->
       <header class="dashboard-topbar">
         <button class="menu-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
         <div class="profile-area">
@@ -42,98 +45,136 @@
       </header>
 
       <div class="dashboard-content">
-        <div class="page-header">
-          <h1>Critérios de avaliação</h1>
-          <a class="primary-action-button" href="lancar-notas.html" style="text-decoration: none;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
-            Novo critério
-          </a>
+        <!-- Passos Fixos na rolagem para navegação rápida -->
+        <div class="steps-wrapper">
+          <nav class="steps-container" aria-label="Passos da Avaliação">
+            <a class="step-item active" href="#etapa-aluno">
+              <span class="step-number">1</span>
+              <span>Aluno</span>
+            </a>
+            <a class="step-item" href="#etapa-criterios">
+              <span class="step-number">2</span>
+              <span>Critérios</span>
+            </a>
+            <a class="step-item" href="#etapa-observacoes">
+              <span class="step-number">3</span>
+              <span>Observações</span>
+            </a>
+            <a class="step-item" href="#etapa-revisar">
+              <span class="step-number">4</span>
+              <span>Revisar</span>
+            </a>
+          </nav>
         </div>
 
-        <section class="criteria-section">
+        <!-- ETAPA 1: Selecione o Aluno e a Turma -->
+        <section id="etapa-aluno" class="scroll-section">
+          <h2>1. Selecione o aluno e a turma</h2>
+          
+          <div class="input-group">
+            <label>Alunos*</label>
+            <div class="select-wrap">
+              <select>
+                <option>Ana Mikaelly (Código: 001)</option>
+                <option>Ana Cecília (Código: 002)</option>
+                <option>Maria Marcela (Código: 003)</option>
+              </select>
+              <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Turmas*</label>
+            <div class="select-wrap">
+              <select>
+                <option>Turma A - Desenvolvimento de Sistemas</option>
+                <option>Turma B - Redes de Computadores</option>
+              </select>
+              <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <a class="primary-btn" href="#etapa-criterios">Próximo</a>
+          </div>
+        </section>
+
+        <!-- ETAPA 2: Critérios de Avaliação e Notas -->
+        <section id="etapa-criterios" class="scroll-section">
+          <h2>2. Critérios de Avaliação</h2>
           <div class="table-scroll">
             <table class="criteria-table">
               <thead>
                 <tr>
-                  <th>Nome</th>
-                  <th>Descrição</th>
+                  <th>Critério</th>
                   <th>Peso</th>
-                  <th>Nota mín.</th>
-                  <th>Nota máx.</th>
-                  <th>Status</th>
-                  <th aria-label="Ações"></th>
+                  <th>Nota (0 - 10)</th>
+                  <th>Descrição</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>Trabalho em equipe</td>
-                  <td>Participação e colaboração.</td>
                   <td>20%</td>
-                  <td>0</td>
-                  <td>10</td>
-                  <td><span class="status-pill ativo">Ativo</span></td>
-                  <td>
-                    <a class="more-actions-btn" href="lancar-notas.html" aria-label="Mais opções">
-                      <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
-                    </a>
-                  </td>
+                  <td><input type="text" class="grade-input" value="9,0"></td>
+                  <td>Excelente participação.[cite: 5, 23]</td>
                 </tr>
                 <tr>
                   <td>Resolução de problemas</td>
-                  <td>Análise e solução de problemas.</td>
                   <td>25%</td>
-                  <td>0</td>
-                  <td>10</td>
-                  <td><span class="status-pill ativo">Ativo</span></td>
-                  <td>
-                    <a class="more-actions-btn" href="lancar-notas.html" aria-label="Mais opções">
-                      <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
-                    </a>
-                  </td>
+                  <td><input type="text" class="grade-input" value="8,5"></td>
+                  <td>Boa análise e solução.[cite: 5, 23]</td>
                 </tr>
                 <tr>
                   <td>Conhecimento técnico</td>
-                  <td>Domínio do conteúdo.</td>
                   <td>30%</td>
-                  <td>0</td>
-                  <td>10</td>
-                  <td><span class="status-pill ativo">Ativo</span></td>
-                  <td>
-                    <a class="more-actions-btn" href="lancar-notas.html" aria-label="Mais opções">
-                      <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
-                    </a>
-                  </td>
+                  <td><input type="text" class="grade-input" value="9,0"></td>
+                  <td>Domínio do conteúdo.[cite: 5, 23]</td>
                 </tr>
                 <tr>
                   <td>Comunicação</td>
-                  <td>Clareza e organização.</td>
                   <td>15%</td>
-                  <td>0</td>
-                  <td>10</td>
-                  <td><span class="status-pill ativo">Ativo</span></td>
-                  <td>
-                    <a class="more-actions-btn" href="lancar-notas.html" aria-label="Mais opções">
-                      <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
-                    </a>
-                  </td>
+                  <td><input type="text" class="grade-input" value="8,0"></td>
+                  <td>Se expressa bem.[cite: 5, 23]</td>
                 </tr>
                 <tr>
                   <td>Pontualidade</td>
-                  <td>Entrega de atividades.</td>
                   <td>10%</td>
-                  <td>0</td>
-                  <td>10</td>
-                  <td><span class="status-pill ativo">Ativo</span></td>
-                  <td>
-                    <a class="more-actions-btn" href="lancar-notas.html" aria-label="Mais opções">
-                      <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
-                    </a>
-                  </td>
+                  <td><input type="text" class="grade-input" value="10,0"></td>
+                  <td>Sempre entrega no prazo.[cite: 5, 23]</td>
                 </tr>
               </tbody>
             </table>
           </div>
+
+          <div class="form-actions" style="margin-top: 20px;">
+            <a class="primary-btn" href="#etapa-observacoes">Próximo</a>
+          </div>
         </section>
+
+        <!-- ETAPA 3: Observações Gerais -->
+        <section id="etapa-observacoes" class="scroll-section">
+          <h2>3. Observações gerais (opcional)</h2>
+          <div class="input-group">
+            <textarea class="general-obs-textarea" placeholder="Digite aqui..."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <a class="primary-btn" href="#etapa-revisar">Próximo</a>
+          </div>
+        </section>
+
+        <!-- ETAPA 4: Revisar e Salvar -->
+        <section id="etapa-revisar" class="scroll-section">
+          <h2>4. Revisar e Salvar Avaliação</h2>
+          <p style="color: #7a92b0; font-size: 14px; margin-bottom: 20px;">Confira os dados informados acima antes de concluir a avaliação da aluna Ana Mikaelly.</p>
+          
+          <div class="form-actions">
+            <a class="primary-btn" style="background: #fff; border: 1px solid #b9c6d4; color: #3f5f88;" href="#etapa-aluno">Cancelar</a>
+            <a class="primary-btn" href="painelprincipal.html">Salvar avaliação</a>
+          </div>
+        </section>
+
       </div>
     </section>
   </main>
